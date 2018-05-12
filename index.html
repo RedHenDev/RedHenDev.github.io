@@ -21,10 +21,10 @@ var tStamp = 0;
 
 
 function setup(){
-   createCanvas(window.innerWidth, window.innerHeight);
+   let cnv = createCanvas(window.innerWidth, window.innerHeight);
   //createCanvas(512,512);
   //background(255,101,170);
-
+cnv.style('display', 'block');
   
   // Parameters: root origin x,y. Length of root. Rotation of root. Number of segments.
   var tNum = 22;
