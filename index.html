@@ -21,13 +21,13 @@ var kaa = [];
 
 var tStamp = 0;
 
-
+let canv;
 
 function setup(){
-   let cnv = createCanvas(window.innerWidth, window.innerHeight);
+   canv = createCanvas(windowWidth, windowHeight);
   //createCanvas(512,512);
   //background(255,101,170);
-cnv.style('display', 'block');
+    canv.style('display', 'block');
   
   // Parameters: root origin x,y. Length of root. Rotation of root. Number of segments.
   var tNum = 22;
@@ -45,6 +45,11 @@ cnv.style('display', 'block');
   
   tStamp = millis();
   
+}
+        
+function windowResized(){
+    resizeCanvas(windowWidth, windowHeight);
+    canv.style('display', 'block');
 }
 
 var r = 0;  // Guides rotation of the group.
