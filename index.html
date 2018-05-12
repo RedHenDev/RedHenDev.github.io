@@ -49,7 +49,9 @@ function genSeagrass(){
  // Parameters: root origin x,y. Length of root. Rotation of root. Number of segments.
   var tNum = 12;
   for (j = 0; j < tNum; j++){
-    tentacles.push(new Tentacle((width/tNum)*j+42, height, 2.2, -90,random(12,84)));
+      let sizeT = 22;
+      if (j === 2 || j === 3) sizeT=2;
+    tentacles.push(new Tentacle((width/tNum)*j+42, height, sizeT, -90,random(12,84)));
   }   
     
 }
