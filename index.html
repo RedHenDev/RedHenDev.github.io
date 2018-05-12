@@ -74,10 +74,10 @@ function draw(){
   // translate(width/2,height/2);
   // rotate(r+=0.01);
   
-    // Move first tentacle with first shrimp head.
-    tentacles[2].orig.x = kaa[2].orig.x;
-    tentacles[2].orig.y = kaa[2].orig.y;
-    tentacles[2].rRot = kaa[2].rRot;
+    // Move a tentacle with a shrimp head.
+    tentacles[2].segs[0].orig.x = kaa[2].orig.x;
+    tentacles[2].segs[0].orig.y = kaa[2].orig.y;
+    tentacles[2].segs[0].angle = kaa[2].rRot;
     
   r += 0.1; // For rotation of WP...
   
