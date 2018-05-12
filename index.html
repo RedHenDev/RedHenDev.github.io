@@ -21,10 +21,15 @@ var kaa = [];
 
 var tStamp = 0;
 
+        // Canvas.
 let canv;
 
+        // Canvas padding.
+        let cPadx = 80;
+        let cPady = 80;
+        
 function setup(){
-   canv = createCanvas(windowWidth, windowHeight);
+   canv = createCanvas(windowWidth - cPadx, windowHeight - cPady);
   //createCanvas(512,512);
   //background(255,101,170);
     canv.style('display', 'block');
@@ -48,7 +53,7 @@ function setup(){
 }
         
 function windowResized(){
-    resizeCanvas(windowWidth, windowHeight);
+    resizeCanvas(windowWidth - cPadx, windowHeight- cPady);
     canv.style('display', 'block');
 }
 
